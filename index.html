@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JavaScript Lab</title>
+  <link rel=“stylesheet” href=“https://unpkg.com/mocha/mocha.css” />
 </head>
 <body>
   hello
+  <!-- run npm install in terminal, make sure mocha + chai are in node_modules -->
+  <script src ="node_modules/mocha/mocha.js"></script>
+  <script src = "node_modules/chai/chai.js"></script>
+  <div id ="mocha"></div>
+
+  <script class='mocha-init'>
+    mocha.setup('bdd');
+  </script>
+  <script src="index.js"></script>
+  <script src="./test/indexTest.js"></script>
+  <script class="mocah-exec">
+    mocha.run()
+  </script>
 </body>
 </html>
